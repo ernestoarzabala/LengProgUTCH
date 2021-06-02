@@ -4,3 +4,14 @@ lab50:
     - readme
     - terminal
   cmd: bash
+ files:
+    - !exclude "*"
+    - !include ex01.c
+
+submit50:
+  files: &files
+    - !exclude "*"
+    - !require ex01.c
+
+check50:
+  files: *files
